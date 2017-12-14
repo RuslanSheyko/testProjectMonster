@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test">
+    <test name="BadPass" group-by-instances="true">
+        <classes>
+            <class name="Main">
+                <parameter name="pass" value="test">
+                <parameter name="finalTxt" value="Six characters minimum and 50 maximum.">
+                     <methods>
+                         <include name="VerifyBadPass"/>
+                    </methods>
+                </parameter>
+                </parameter>
+            </class>
+        </classes>
+    </test>
+    <test name="EmptyPass" group-by-instances="true">
+        <classes>
+            <class name="Main">
+                <parameter name="finalTxt" value="Please enter your password">
+                <parameter name="pass" value="">
+                    <methods>
+                        <include name="VerifyBadPass"/>
+                    </methods>
+                </parameter>
+                </parameter>
+            </class>
+        </classes>
+    </test>
+    <test name="Positive">
+        <classes>
+            <class name="Main">
+                <methods>
+                    <exclude name="VerifyBadPass"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
