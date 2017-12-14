@@ -1,5 +1,5 @@
 # testProjectMonster
 To run project you need JDK JAVA 1.8
-Project Struct 
-TestProject- Sources
-Test- Tests
+All test drivers located in folder Resources 
+To run Chrome copy chromeDriver to folder Resources
+To changed browser change Driver to another 
